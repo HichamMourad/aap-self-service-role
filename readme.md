@@ -9,7 +9,7 @@ This document provides step-by-step instructions to install and configure the Re
 
 ```
 aap-ss/
-├── test-role.yml
+├── deploy-aap-selfservice.yml
 ├── requirements.yml
 ├── secrets.yml               # <== You create this file manually
 ├── role/
@@ -17,7 +17,7 @@ aap-ss/
 │       ├── defaults/
 │       ├── files/
 │       │   └── plugins/
-│       │       ├── ansible-plugin-backstage-*.tgz # <== You need to add these manually
+│       │       ├── ansible-plugin-backstage-*.tar.gz # <== You need to add these manually
 
 │       │       └── ...
 │       ├── tasks/
@@ -56,7 +56,7 @@ controller_host: "" # AAP Route Endpoint
 
 ## 📦 Step 2: Add Dynamic Plugins
 
-Place your `.tgz` plugin packages in:
+Place your `.tar.gz` plugin packages in:
 
 ```
 role/self-service/files/plugins/
@@ -66,8 +66,8 @@ Example:
 
 ```
 role/self-service/files/plugins/
-├── ansible-plugin-backstage-self-service-dynamic-1.5.0.tgz
-├── ansible-plugin-backstage-rhaap-dynamic-1.5.0.tgz
+├── self-service-automation-portal-plugins-x.x.x.tar.gz
+├── ansible-rhdh-plugins-x.x.x.tar.gz
 └── ...
 ```
 
@@ -80,9 +80,9 @@ These will be used as the source for the plugin registry build.
 You can run all steps using:
 
 ```bash
-ansible-playbook test-role.yml
+ansible-playbook deploy-aap-selfservice.yml
 
-MAC venv: ansible-playbook test-role.yml -e "ansible_python_interpreter=$(which python)"
+MAC venv: ansible-playbook deploy-aap-selfservice.yml -e "ansible_python_interpreter=$(which python)"
 
 ```
 
@@ -167,7 +167,7 @@ The Helm chart deployed is:
 
 ```yaml
 chart: https://charts.openshift.io
-name: redhat-rhaap-self-service-preview
+name: redhat-rhaap-portal
 ```
 
 ---

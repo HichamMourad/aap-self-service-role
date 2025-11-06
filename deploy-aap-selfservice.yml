@@ -1,5 +1,5 @@
 ---
-- name: Test self-service role
+- name: Install self-service automation portal
   hosts: localhost
   gather_facts: false
 
@@ -8,4 +8,3 @@
 
   roles:
     - role: self-service 
-

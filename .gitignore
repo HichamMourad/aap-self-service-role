@@ -1,4 +1,8 @@
 **/self-service/files/plugins/*
 **/secrets.yml
 **/venv
+**/.venv
 ansible.cfg
+.DS_Store
+.lock
+.venv

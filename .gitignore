@@ -6,4 +6,4 @@ ansible.cfg
 .DS_Store
 .lock
 .venv
-.vscode
+**/.vscode

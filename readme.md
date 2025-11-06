@@ -3,6 +3,8 @@
 
 This document provides step-by-step instructions to install and configure the Red Hat AAP Self Service Portal using an Ansible role and a Helm chart on OpenShift.
 
+Tested with Ansible Automation Platform 2.6 and Self-Service automation Portal (GA with AAP 2.6)
+
 ---
 
 ## 📁 Repository Structure
@@ -17,7 +19,7 @@ aap-ss/
 │       ├── defaults/
 │       ├── files/
 │       │   └── plugins/
-│       │       ├── ansible-plugin-backstage-*.tar.gz # <== You need to add these manually
+│       │       ├── self-service-automation-portal-plugins-x.x.x.tar.gz # <== You need to add these manually
 
 │       │       └── ...
 │       ├── tasks/

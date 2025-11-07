@@ -182,6 +182,8 @@ name: redhat-rhaap-portal
 
   * `ansible`
   * `redhat.openshift` and `ansible.platform` collections installed
+  * `oc` OpenShift CLI
+  * `helm` HELM CLI
 
 ```bash
 ansible-galaxy collection install redhat.openshift

@@ -50,7 +50,7 @@ gitlab_token: gitlab-scm
 # AAP OAuth/user token will be created automatically
 
 # defaults/main.yml
-namespace: self-service #change if you want a different ns/project
+openshift_namespace: self-service #change if you want a different ns/project
 controller_host: "" # AAP Route Endpoint
 ```
 
